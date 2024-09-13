@@ -9,6 +9,12 @@ Welcome to the Blog Application! This is a simple blog platform where users can 
 - Delete blog posts
 - View a list of all blog posts
 
+## Tools and Framework
+- Node.js
+- Express.js
+- EJS
+- Tailwind CSS
+
 ## Installation
 
 1. Clone the repository:
@@ -31,7 +37,3 @@ Welcome to the Blog Application! This is a simple blog platform where users can 
     npm start
     ```
 2. Open your browser and navigate to `http://localhost:3000`
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
