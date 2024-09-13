@@ -34,6 +34,6 @@ Welcome to the Blog Application! This is a simple blog platform where users can 
 
 1. Start the development server:
     ```sh
-    npm start
+    npm app.js
     ```
 2. Open your browser and navigate to `http://localhost:3000`
