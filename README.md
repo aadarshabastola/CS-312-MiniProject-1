@@ -35,7 +35,3 @@ Welcome to the Blog Application! This is a simple blog platform where users can 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any inquiries, please contact [yourname@example.com](mailto:yourname@example.com).
