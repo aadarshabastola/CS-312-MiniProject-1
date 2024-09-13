@@ -1,0 +1,34 @@
+<%- include('layout') %>
+
+    <% if (posts.length === 0) { %>
+        <div class="md:w-4/5 mx-auto p-6 shadow-md rounded bg-white">
+            <h3 class="text-center text-lg font-bold mt-4">No Posts Yet :(</h2>
+            <h3 class="text-center mb-4">Stay tuned for more blogs..</h2>
+        </div>
+        <% } else { %>
+
+    <% posts.forEach((post, index)=> { %>
+        <div class="md:w-4/5 mx-auto p-6 shadow-md rounded bg-white mb-4">
+            <h2 class="font-bold text-4xl mb-4">
+                <%= post.title %>
+            </h2>
+            <h3 class=" text-gray-500 mb-4">
+                Category: <%= post.category %>
+            </h3>
+            <p>
+                <%- post.content.replace(/\n/g, '<br>') %>
+            </p>
+
+            <div class="mt-4">
+                <a href="/edit/<%= index %>" >
+                <div class=" bg-teal-600 text-white p-2 rounded mb-4 items-center flex justify-center">
+                   Edit
+                </div>
+            </a>
+                <form action="/delete/<%= index %>" method="POST">
+                    <button type="submit" class=" bg-red-500 text-white p-2 rounded w-full">Delete</button>
+                </form>
+            </div>
+        </div>
+    <% }) %>
+    <% } %>
