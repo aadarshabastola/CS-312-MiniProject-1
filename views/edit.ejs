@@ -1,13 +1,14 @@
 <%- include('layout') %>
 
-<div class="md:w-4/5 mx-auto p-6 shadow-md rounded">
+<div class="md:w-4/5 mx-auto p-6 shadow-md rounded bg-white">
     <form action="/edit/<%= id %>" method="POST">
     <h2 class="font-bold text-4xl mb-4">Edit Post</h2>
     <input type="text" name="title" value="<%= post.title %>" required class="w-full p-2 border border-teal-600 rounded mb-4">
+    <input type="text" name="author" value="<%= post.author %>" placeholder="Author Name" readonly class="w-full p-2 border border-teal-600 rounded mb-4">
     <textarea name="content" required class="w-full p-2 border border-teal-600 rounded mb-4 min-h-80"><%= post.content %></textarea>
 
     <select name="category" id="category" required class="w-full p-2 border border-teal-600 rounded mb-4">
-        <option value="" disabled selected>Select a category</option>
+        <option value="<%= post.category %>" selected><%= post.category %></option>
             <option value="Technology">Technology</option>
             <option value="Lifestyle">Lifestyle</option>
             <option value="Education">Education</option>
