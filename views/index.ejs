@@ -15,9 +15,11 @@
             <h2 class="font-bold text-4xl mb-4">
                 <%= post.title %>
             </h2>
-            <h3 class=" text-gray-500 mb-4">
-                Category: <%= post.category %>
-            </h3>
+            <p class=" text-gray-500 mb-4">
+                Category: <%= post.category %><br>
+                Author: <%= post.author %><br>
+                Date Posted: <%= post.createdAt %><br>
+            </p>
             <p>
                 <%- post.content.replace(/\n/g, '<br>') %>
             </p>

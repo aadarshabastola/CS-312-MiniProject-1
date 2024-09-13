@@ -33,6 +33,8 @@ app.get('/create', (req, res) => {
 app.post('/create', (req, res) => {
     const post = {
         title: req.body.title,
+        author: req.body.author,
+        createdAt: new Date(),
         content: req.body.content,
         category: req.body.category
     };
@@ -48,6 +50,7 @@ app.get('/edit/:id', (req, res) => {
 app.post('/edit/:id', (req, res) => {
     const id = req.params.id;
     posts[id].title = req.body.title;
+    posts[id].author = req.body.author;
     posts[id].content = req.body.content;
     posts[id].category = req.body.category;
     res.redirect('/');
