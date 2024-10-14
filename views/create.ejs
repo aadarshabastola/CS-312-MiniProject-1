@@ -1,11 +1,12 @@
 <%- include('layout') %>
 
-<div class="md:w-4/5 mx-auto p-6 shadow-md rounded bg-white">
+<div class="max-w-4xl mx-auto my-8 p-6 bg-white shadow-md rounded-lg">
     <form action="/create" method="POST">
-    <h2 class="font-bold text-4xl mb-4">New Post</h2>
-    <input type="text" name="title" placeholder="Title" required class="w-full p-2 border border-teal-600 rounded mb-4">
-    <input type="text" name="author" placeholder="Author Name" required class="w-full p-2 border border-teal-600 rounded mb-4">
-    <textarea name="content" placeholder="Content" required class="w-full p-2 border border-teal-600 rounded mb-4 min-h-80"></textarea>
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Create a New Blog Post</h2>
+        
+        <input type="text" name="title" placeholder="Title" required class="w-full p-2 border border-teal-600 rounded mb-4">
+        
+        <textarea name="content" placeholder="Content" required class="w-full p-2 border border-teal-600 rounded mb-4 min-h-80 h-96"></textarea>
 
         <select name="category" id="category" required class="w-full p-2 border border-teal-600 rounded mb-4">
             <option value="" disabled selected>Select a category</option>
@@ -15,8 +16,14 @@
             <option value="Health">Health</option>
         </select>
 
-    <div class="flex space-x-4">
-        <button type="submit" class="w-full bg-teal-600 text-white p-2 rounded">Create</button>
-    </div>
-</form>
+        <div class="flex space-x-4">
+            <button type="submit" class="w-full bg-gray-700 hover:bg-gray-900 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Create</button>
+        </div>
+    </form>
 </div>
+
+<footer class="max-w-4xl md:w-4/5 mx-auto flex items-center justify-between p-6 bg-white text-gray-800 shadow-lg rounded-lg mt-6 mb-6">
+    <div class="flex-grow text-center">
+        <p class="text-sm">&copy; <%= new Date().getFullYear() %> Blog App. All rights reserved.</p>
+    </div>
+</footer>

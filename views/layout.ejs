@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/styles.css" rel="stylesheet">
     <title>Blog Web App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-50 ">
-    <header class="md:w-4/5 mx-auto flex items-center justify-between p-6 bg-white text-white shadow-md rounded md:mt-6 mb-6">
+<body class="bg-gray-100">
+    <header class="max-w-4xl md:w-4/5 mx-auto flex items-center justify-between p-6 bg-white text-gray-800 shadow-lg rounded-lg mt-6 mb-6">
         <div class="flex-grow text-center">
-            <h1 class="text-3xl font-bold text-black"><a href="/">Personal Blog</a></h1>
+            <h1 class="text-4xl font-extrabold text-gray-900"><a href="/">Personal Blog</a></h1>
         </div>
             
-        
+        <div class="flex space-x-4">
+            <% if (typeof currentUser !== 'undefined' && currentUser) { %>
+                <a href="/signout" class="bg-gray-700 hover:bg-gray-900 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Sign Out</a>
+            <% } else { %>
+                <a href="/signin" class="bg-gray-700 hover:bg-gray-900 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Sign In</a>
+            <% } %>
+        </div>
     </header>
-
-    
 </body>
 </html>
